@@ -27,6 +27,11 @@
             #binding-cells = <0>;
             bindings = <&bt BT_NXT>;
         };
+        start_pairing: start_pairing {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_PAIR>;
+        };
     };
 
     sensors {
