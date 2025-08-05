@@ -19,9 +19,6 @@
             tapping-term-ms = <2000>;
             bindings = <&start_pairing>, <&nxt_bt_conn>;
         };
-    };
-
-    macros {
         nxt_bt_conn: nxt_bt_conn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
