@@ -1,7 +1,7 @@
 if ADBK
 
 config ZMK_KEYBOARD_NAME
-    default "ADB Keyboard"
+    default "Modern Macintosh"
 
 config LV_Z_VDB_SIZE
     default 100
