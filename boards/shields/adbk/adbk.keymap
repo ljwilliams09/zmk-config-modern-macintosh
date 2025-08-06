@@ -17,7 +17,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <2000>;
-            bindings = <&start_pairing>, <&nxt_bt_conn>;
+            bindings = <&start_pairing &nxt_bt_conn>;
         };
         nxt_bt_conn: nxt_bt_conn {
             compatible = "zmk,behavior-macro";
@@ -39,7 +39,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp ESC>, <&clear_bonds>;
+            bindings = <&kp ESC &clear_bonds>;
         };
     };
 
