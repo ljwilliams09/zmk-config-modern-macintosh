@@ -31,6 +31,7 @@
         };
     };
 
+
     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&digital_crown>;
