@@ -17,7 +17,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <2000>;
-            bindings = <&start_pairing &nxt_bt_conn>;
+            bindings = <&start_pairing> <&nxt_bt_conn>;
         };
         nxt_bt_conn: nxt_bt_conn {
             compatible = "zmk,behavior-macro";
@@ -28,18 +28,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 1>;
-        };
-        clear_bonds: clear_bonds {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_CLR_ALL>;
-        };
-        esc_hold_clear: esc_hold_clear {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp ESC &clear_bonds>;
         };
     };
 
