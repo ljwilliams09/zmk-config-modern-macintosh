@@ -27,8 +27,8 @@
         start_pairing: start_pairing {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_PAIR>;
-        };
+            bindings = <&bt BT_SEL 1>;
+};
     };
 
 
