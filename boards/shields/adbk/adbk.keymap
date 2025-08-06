@@ -39,7 +39,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&clear_bonds>, <&kp ESC>;
+            bindings = <&kp ESC>, <&clear_bonds>;
         };
     };
 
