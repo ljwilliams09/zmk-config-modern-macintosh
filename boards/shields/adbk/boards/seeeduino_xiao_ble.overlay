@@ -29,4 +29,22 @@
             reg = <0x21>;
             #gpio-cells = <2>;
             ngpios = <16>;
-            int-gpios =
+            int-gpios = <&xiao_d 3 GPIO_ACTIVE_LOW>;
+        };
+    };
+
+    nice_view_spi: xiao_spi {
+        status = "okay";
+        compatible = "nordic,nrf-spim";
+        pinctrl-names = "default", "sleep";
+        cs-gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;
+
+        ls0xx: ls0xx@0 {
+            compatible = "sharp,ls0xx";
+            spi-max-frequency = <1000000>;
+            reg = <0>;
+            width = <160>;
+            height = <68>;
+        };
+    };
+};
