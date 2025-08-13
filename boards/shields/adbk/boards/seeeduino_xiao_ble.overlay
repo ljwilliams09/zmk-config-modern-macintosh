@@ -23,7 +23,7 @@
     };
 };
 
-nice_view_spi: &xiao_spi {
+nice_view_spi: &spi1 {
     status = "okay";
     compatible = "nordic,nrf-spim";
     pinctrl-names = "default", "sleep";
