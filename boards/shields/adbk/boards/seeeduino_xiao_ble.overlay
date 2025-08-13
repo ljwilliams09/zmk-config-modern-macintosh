@@ -32,7 +32,7 @@ chosen {
     };
 };
 
-nice_view_spi: &xiao_spi {
+&xiao_spi {
     status = "okay";
     compatible = "nordic,nrf-spim";
     pinctrl-names = "default", "sleep";
