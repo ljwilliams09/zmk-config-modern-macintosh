@@ -1,6 +1,5 @@
 &usbd {
     status = "okay";
-    zephyr,dr-mode = "otg";
 };
 
 &xiao_i2c {
