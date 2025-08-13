@@ -1,6 +1,5 @@
 &usbd {
     status = "okay";
-    dr_mode = "peripheral";
 };
 
 &xiao_i2c {
