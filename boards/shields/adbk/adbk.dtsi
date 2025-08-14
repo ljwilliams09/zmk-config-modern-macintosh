@@ -4,7 +4,7 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix-transform = &default_transform;
-        /* zephyr,display = &nice_view;  <-- remove/comment out */
+        zephyr,display = &nice_view;
     };
 
     kscan0: kscan_composite {
@@ -51,12 +51,12 @@
 
     kscan1: kscan_matrix {
         compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "col2row";
+        diode-direction = "row2col";
         col-gpios
-            = <&ext1 3 GPIO_ACTIVE_LOW>
-            , <&ext1 6 GPIO_ACTIVE_LOW>
+            = <&ext1 6 GPIO_ACTIVE_LOW>
             , <&ext1 5 GPIO_ACTIVE_LOW>
             , <&ext1 4 GPIO_ACTIVE_LOW>
+            , <&ext1 3 GPIO_ACTIVE_LOW>
             , <&ext1 2 GPIO_ACTIVE_LOW>
             , <&ext1 1 GPIO_ACTIVE_LOW>
             , <&ext1 0 GPIO_ACTIVE_LOW>
@@ -82,7 +82,7 @@
         a-gpios = <&ext2 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&ext2 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
-        status = "okay";
+        status = "disabled";
     };
 
     default_transform: matrix_transform {
