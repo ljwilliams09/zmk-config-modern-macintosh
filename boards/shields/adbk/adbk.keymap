@@ -70,7 +70,7 @@
             bindings = <&bt BT_NXT>;
         };
     };
-    
+
     keymap {
         compatible = "zmk,keymap";
         default_layer {
