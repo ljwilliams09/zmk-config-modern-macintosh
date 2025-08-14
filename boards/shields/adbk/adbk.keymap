@@ -19,44 +19,39 @@
             tapping-term-ms = <2000>;
             bindings = <&soft_off>, <&nxt_bt_conn>;
         };
+        
         oneshot_4: oneshot_4 {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <1>;
             bindings = <&kp N4>;
             wait-ms = <1>;
          };
 
         oneshot_r: oneshot_r {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <1>;
             bindings = <&kp R>;
             wait-ms = <1>;
         };
 
         oneshot_g: oneshot_g {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <1>;
             bindings = <&kp G>;
             wait-ms = <1>;
         };
 
         oneshot_b: oneshot_b {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <1>;
             bindings = <&kp B>;
             wait-ms = <1>;
         };
 
         oneshot_del: oneshot_del {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <1>;
             bindings = <&kp DELETE>;
             wait-ms = <1>;
         };
 
         oneshot_kp_plus: oneshot_kp_plus {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <1>;
             bindings = <&kp KP_PLUS>;
             wait-ms = <1>;
         };
