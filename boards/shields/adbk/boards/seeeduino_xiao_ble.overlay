@@ -23,27 +23,3 @@
         int-gpios = <&xiao_d 3 GPIO_ACTIVE_LOW>;
     };
 };
-
-/* Define pinctrl for SPI1 */
-nice_view_pins: nice_view_pins {
-    psels = <NRF_P0_24 /* SCK */,
-             NRF_P0_22 /* MOSI */,
-             NRF_P0_23 /* MISO */>;
-};
-
-/* Enable SPI1 with label reference */
-nice_view: &spi1 {
-    status = "okay";
-    compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&nice_view_pins>;   /* <-- & required here */
-    pinctrl-names = "default", "sleep";
-    cs-gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;
-
-    ls0xx: ls0xx@0 {
-        compatible = "sharp,ls0xx";
-        spi-max-frequency = <1000000>;
-        reg = <0>;
-        width = <160>;
-        height = <68>;
-    };
-};
