@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT     0
-#define CAPS        1
+#define cap         1
 #define FUNCTION    2
 
 &digital_crown {
@@ -48,7 +48,7 @@
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        caps_layer {
+        cap_layer {
             bindings = <
                 &trans      &trans  
     &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans       &trans         &trans          &trans       &trans     &trans      &trans      &trans
