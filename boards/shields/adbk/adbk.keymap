@@ -19,6 +19,9 @@
             tapping-term-ms = <2000>;
             bindings = <&soft_off>, <&nxt_bt_conn>;
         };
+        tap: tap {
+            compatible = "zmk,behavior-tap";
+        };
     };
 
     macros {
