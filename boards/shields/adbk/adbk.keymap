@@ -22,37 +22,37 @@
 
         oneshot_4: oneshot_4 {
             compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             bindings = <&kp N4>;
         };
 
         oneshot_r: oneshot_r {
             compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             bindings = <&kp R>;
         };
 
         oneshot_g: oneshot_g {
             compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             bindings = <&kp G>;
         };
 
         oneshot_b: oneshot_b {
             compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             bindings = <&kp B>;
         };
 
         oneshot_del: oneshot_del {
             compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             bindings = <&kp DELETE>;
         };
 
         oneshot_kp_plus: oneshot_kp_plus {
             compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             bindings = <&kp KP_PLUS>;
         };
     };
