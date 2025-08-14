@@ -29,11 +29,6 @@
         };
     };
 
-    sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&digital_crown>;
-    };
-
     keymap {
         compatible = "zmk,keymap";
         default_layer {
