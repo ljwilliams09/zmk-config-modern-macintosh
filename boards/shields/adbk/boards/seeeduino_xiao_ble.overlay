@@ -24,20 +24,6 @@
     };
 };
 
-/* Keymap overlay with broken keys only */
- / {
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-                &kp_4
-                &kp_r
-                &kp_g
-                &kp_b
-                &kp_delete
-                &kp_plus
-            >;
-        };
-    };
+&uart0_default {
+    status = "disabled";
 };
