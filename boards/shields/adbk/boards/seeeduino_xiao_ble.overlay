@@ -1,3 +1,4 @@
+/* Enable I2C for the Xiao */
 &xiao_i2c {
     status = "okay";
     clock-frequency = <I2C_BITRATE_FAST>;
@@ -30,11 +31,11 @@ nice_view_pins: nice_view_pins {
              NRF_P0_23 /* MISO */>;
 };
 
-/* SPI node for LS0xx display */
+/* Enable SPI1 with label reference */
 nice_view: &spi1 {
     status = "okay";
     compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&nice_view_pins>;   // now this works
+    pinctrl-0 = <&nice_view_pins>;   /* <-- & required here */
     pinctrl-names = "default", "sleep";
     cs-gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;
 
