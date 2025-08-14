@@ -19,48 +19,11 @@
             tapping-term-ms = <2000>;
             bindings = <&soft_off>, <&nxt_bt_conn>;
         };
-
-        oneshot_4: oneshot_4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp N4>;
-            wait-ms = <1>;
-         };
-
-        oneshot_r: oneshot_r {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp R>;
-            wait-ms = <1>;
+        broken: behavior-simple-key { 
+            compatible = "zmk,behavior-simple-key";
+            #binding-cells = <1>;
         };
 
-        oneshot_g: oneshot_g {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp G>;
-            wait-ms = <1>;
-        };
-
-        oneshot_b: oneshot_b {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp B>;
-            wait-ms = <1>;
-        };
-
-        oneshot_del: oneshot_del {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp DELETE>;
-            wait-ms = <1>;
-        };
-
-        oneshot_kp_plus: oneshot_kp_plus {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp KP_PLUS>;
-            wait-ms = <1>;
-        };
     };
 
     macros {
@@ -76,11 +39,11 @@
         default_layer {
             bindings = <
                 &kp C_MUTE  &pwrbtn 0 0
-    &kp ESC     &kp N1      &kp N2      &kp N3      &oneshot_4  &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS   &kp EQUAL       &oneshot_del    &tog FUNCTION   &kp KP_EQUAL    &kp KP_SLASH    &kp KP_ASTERISK
-    &kp TAB     &kp Q       &kp W       &kp E       &oneshot_r  &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp LBKT    &kp RBKT                        &kp KP_N7       &kp KP_N8       &kp KP_N9       &oneshot_kp_plus
-    &kp LCTRL   &kp A       &kp S       &kp D       &kp F       &oneshot_g  &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp APOS    &kp RET                         &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
-    &kp LSHIFT  &kp Z       &kp X       &kp C       &kp V       &oneshot_b  &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH                                                &kp KP_N1       &kp KP_N2       &kp KP_N3  
-    &mo CAPS    &kp LALT    &kp LCMD    &kp GRAVE                           &kp SPACE               &kp BSLH    &kp LEFT    &kp RIGHT   &kp DOWN    &kp UP                          &kp KP_N0                       &kp KP_DOT      &kp KP_ENTER
+    &kp ESC     &kp N1      &kp N2      &kp N3      &broken &kp N4   &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS   &kp EQUAL      &broken &kp DEL    &tog FUNCTION   &kp KP_EQUAL    &kp KP_SLASH    &kp KP_ASTERISK
+    &kp TAB     &kp Q       &kp W       &kp E       &broken &kp R    &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp LBKT    &kp RBKT                        &kp KP_N7       &kp KP_N8       &kp KP_N9       &broken &kp KP_PLUS
+    &kp LCTRL   &kp A       &kp S       &kp D       &kp F        &broken &kp G   &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp APOS    &kp RET                         &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
+    &kp LSHIFT  &kp Z       &kp X       &kp C       &kp V        &broken &kp B   &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH                                                &kp KP_N1       &kp KP_N2       &kp KP_N3  
+    &mo CAPS    &kp LALT    &kp LCMD    &kp GRAVE                            &kp SPACE               &kp BSLH    &kp LEFT    &kp RIGHT   &kp DOWN    &kp UP                          &kp KP_N0                       &kp KP_DOT      &kp KP_ENTER
     >;
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
