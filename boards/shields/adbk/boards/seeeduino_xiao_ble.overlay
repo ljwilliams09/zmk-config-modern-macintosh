@@ -41,9 +41,3 @@
         };
     };
 };
-
-/* Debounce for kscan0 to prevent stuck keys */
-&kscan0 {
-    debounce-press = <20>;
-    debounce-release = <20>;
-};
