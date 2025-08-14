@@ -22,10 +22,12 @@
         int-gpios = <&xiao_d 3 GPIO_ACTIVE_LOW>;
     };
 };
+
+/* SPI node for LS0xx display */
 nice_view: &spi1 {
     status = "okay";
     compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&nice_view_pins>;       /* note the & */
+    pinctrl-0 = <&nice_view_pins>;     /* Must use & */
     pinctrl-names = "default";
     cs-gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;
 
@@ -38,11 +40,9 @@ nice_view: &spi1 {
     };
 };
 
-/* Define pinctrl for SPI1 */
+/* Pinmux/pinctrl node for SPI1 */
 nice_view_pins: nice_view_pins {
-    group1 {
-        psels = <NRF_P0_24 /* SCK */,
-                 NRF_P0_22 /* MOSI */,
-                 NRF_P0_23 /* MISO */>;
-    };
+    psels = <NRF_P0_24 /* SCK */,
+             NRF_P0_22 /* MOSI */,
+             NRF_P0_23 /* MISO */>;
 };
