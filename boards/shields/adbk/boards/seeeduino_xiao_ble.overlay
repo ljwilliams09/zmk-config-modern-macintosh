@@ -27,8 +27,8 @@
 nice_view: &spi1 {
     status = "okay";
     compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&nice_view_pins>;     /* Must use & */
-    pinctrl-names = "default";
+    pinctrl-0 = <&nice_view_pins>;   // now this works
+    pinctrl-names = "default", "sleep";
     cs-gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;
 
     ls0xx: ls0xx@0 {
@@ -40,8 +40,8 @@ nice_view: &spi1 {
     };
 };
 
-/* Pinmux/pinctrl node for SPI1 */
-nice_view_pins: &nice_view_pins {
+/* Define pinctrl for SPI1 */
+nice_view_pins: nice_view_pins {
     psels = <NRF_P0_24 /* SCK */,
              NRF_P0_22 /* MOSI */,
              NRF_P0_23 /* MISO */>;
