@@ -1,4 +1,4 @@
-/* Enable I2C for the Xiao */
+/* I2C and MCP23017 setup */
 &xiao_i2c {
     status = "okay";
     clock-frequency = <I2C_BITRATE_FAST>;
@@ -23,3 +23,22 @@
     };
 };
 
+/* Keymap for broken keys */
+keymap {
+    compatible = "zmk,keymap";
+
+    broken_keys {
+        key-4    = &kp 4;
+        key-r    = &kp r;
+        key-g    = &kp g;
+        key-b    = &kp b;
+        key-del  = &kp delete;
+        key-plus = &kp plus;
+    };
+};
+
+/* Optional: debounce for kscan0 */
+&kscan0 {
+    debounce-press = <10>;
+    debounce-release = <10>;
+};
