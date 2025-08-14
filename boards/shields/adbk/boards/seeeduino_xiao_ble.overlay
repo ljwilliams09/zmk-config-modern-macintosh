@@ -23,6 +23,13 @@
     };
 };
 
+/* Define pinctrl for SPI1 */
+nice_view_pins: nice_view_pins {
+    psels = <NRF_P0_24 /* SCK */,
+             NRF_P0_22 /* MOSI */,
+             NRF_P0_23 /* MISO */>;
+};
+
 /* SPI node for LS0xx display */
 nice_view: &spi1 {
     status = "okay";
@@ -38,11 +45,4 @@ nice_view: &spi1 {
         width = <160>;
         height = <68>;
     };
-};
-
-/* Define pinctrl for SPI1 */
-nice_view_pins: nice_view_pins {
-    psels = <NRF_P0_24 /* SCK */,
-             NRF_P0_22 /* MOSI */,
-             NRF_P0_23 /* MISO */>;
 };
