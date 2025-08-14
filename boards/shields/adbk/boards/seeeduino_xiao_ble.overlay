@@ -26,4 +26,5 @@
 
 &uart0_default {
     status = "disabled";
+    #binding-cells = <0>;
 };
