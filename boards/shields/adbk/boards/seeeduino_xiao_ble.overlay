@@ -22,26 +22,10 @@
         int-gpios = <&xiao_d 3 GPIO_ACTIVE_LOW>;
     };
 };
-
 nice_view: &spi1 {
     status = "okay";
     compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&spi1_default>;       /* REQUIRED */
-    pinctrl-names = "default";         /* REQUIRED */
-    cs-gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;
-
-    ls0xx: ls0xx@0 {
-        compatible = "sharp,ls0xx";
-        spi-max-frequency = <1000000>;
-        reg = <0>;
-        width = <160>;
-        height = <68>;
-    };
-};
-nice_view: &spi1 {
-    status = "okay";
-    compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&nice_view_pins>;
+    pinctrl-0 = <&nice_view_pins>;       /* note the & */
     pinctrl-names = "default";
     cs-gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;
 
