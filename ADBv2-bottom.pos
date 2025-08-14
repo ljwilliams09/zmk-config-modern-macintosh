@@ -1,0 +1,7 @@
+### Footprint positions - created on 2025-07-21T18:59:32-0400 ###
+### Printed by KiCad version 9.0.3
+## Unit = mm, Angle = deg.
+## Side : bottom
+# Ref     Val              Package                         PosX       PosY       Rot  Side
+USB1      TYPE-C_6P_QT073  USB-C-SMD_TYPE-C-6P-QT073   229.7500  -101.9400  -90.0000  bottom
+## End
