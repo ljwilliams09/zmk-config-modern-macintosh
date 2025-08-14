@@ -24,19 +24,19 @@
     };
 };
 
-/* Keymap overlay with only broken keys */
+/* Keymap overlay with broken keys only */
  / {
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-                &kp 4
-                &kp r
-                &kp g
-                &kp b
-                &kp delete
-                &kp plus
+                &kp_4
+                &kp_r
+                &kp_g
+                &kp_b
+                &kp_delete
+                &kp_plus
             >;
         };
     };
@@ -47,4 +47,3 @@
     debounce-press = <20>;
     debounce-release = <20>;
 };
-
