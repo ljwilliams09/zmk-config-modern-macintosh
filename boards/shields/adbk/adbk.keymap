@@ -61,15 +61,14 @@
             wait-ms = <1>;
         };
     };
-};
 
     macros {
         nxt_bt_conn: nxt_bt_conn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_NXT>;
-        };
     };
+};
 
     keymap {
         compatible = "zmk,keymap";
