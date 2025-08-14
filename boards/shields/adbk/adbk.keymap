@@ -20,7 +20,8 @@
             bindings = <&soft_off>, <&nxt_bt_conn>;
         };
         tap: tap {
-            compatible = "zmk,behavior-tap";
+        compatible = "zmk,behavior-tap";
+        #binding-cells = <2>;  /* REQUIRED */
         };
     };
 
