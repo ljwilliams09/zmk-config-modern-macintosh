@@ -1,3 +1,4 @@
+/* Enable I2C for the Xiao */
 &xiao_i2c {
     status = "okay";
     clock-frequency = <I2C_BITRATE_FAST>;
@@ -22,6 +23,7 @@
     };
 };
 
+/* SPI controller for nice_view (Sharp LS0XX) */
 nice_view_spi: &xiao_spi {
     status = "okay";
     compatible = "nordic,nrf-spim";
@@ -29,6 +31,7 @@ nice_view_spi: &xiao_spi {
     cs-gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;
 };
 
+/* Display node must be top-level for zephyr,display */
 nice_view: ls0xx@0 {
     compatible = "sharp,ls0xx";
     spi-max-frequency = <1000000>;
