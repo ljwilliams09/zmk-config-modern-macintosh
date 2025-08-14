@@ -26,7 +26,8 @@
 nice_view: &spi1 {
     status = "okay";
     compatible = "nordic,nrf-spim";
-    pinctrl-names = "default", "sleep";
+    pinctrl-0 = <&spi1_default>;       /* REQUIRED */
+    pinctrl-names = "default";         /* REQUIRED */
     cs-gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;
 
     ls0xx: ls0xx@0 {
@@ -35,5 +36,14 @@ nice_view: &spi1 {
         reg = <0>;
         width = <160>;
         height = <68>;
+    };
+};
+&pinmux {
+    spi1_default: spi1_default {
+        group1 {
+            psels = <NRF_P0_24 /* SCK */,
+                     NRF_P0_22 /* MOSI */,
+                     NRF_P0_23 /* MISO */>;
+        };
     };
 };
