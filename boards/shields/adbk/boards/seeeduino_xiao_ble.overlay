@@ -41,7 +41,7 @@ nice_view: &spi1 {
 };
 
 /* Pinmux/pinctrl node for SPI1 */
-nice_view_pins: nice_view_pins {
+nice_view_pins: &nice_view_pins {
     psels = <NRF_P0_24 /* SCK */,
              NRF_P0_22 /* MOSI */,
              NRF_P0_23 /* MISO */>;
