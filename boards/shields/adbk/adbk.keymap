@@ -27,12 +27,6 @@
             #binding-cells = <0>;
             bindings = <&bt BT_NXT>;
         };
-
-        broken_key_4: broken_key_4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <>;
-        };
     };
 };
 
