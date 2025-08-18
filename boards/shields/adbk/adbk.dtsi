@@ -103,6 +103,7 @@
     };
 };
 
-&bt {
+&bt: bt {
+    compatible = "zephyr,bt-hci";
     status = "okay";
 };
